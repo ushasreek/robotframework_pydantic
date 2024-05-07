@@ -28,22 +28,12 @@ class Model(BaseModel):
     tags: List[Tag]
     status: str
 
-# model = Model(id=1, category=dict(id=0,name= "dog1"), name="CAT", photoUrls=["https://www.pinterest.co.uk/pin/cats-love-ohh-so-cute-cats--612841461819647351/"], tags=[dict(id=0,name="cat1")], status="available")
-
-# print(model.model_dump_json(indent=2))
-
 @library
 class petsLibrary:
     ROBOT_LIBRARY_SCOPE = "GLOBAL"
     
     @keyword
     def generate_add_new_pet_to_store_json(self, id, category, name, photoUrls, tags, status):
-        # self.id = id
-        # self.category = category
-        # self.name = name
-        # self.photoUrls = [photoUrls]
-        # self.tags = [tags]
-        # self.status = status
         model = Model(id=id, category=category, name=name, photoUrls=[photoUrls], tags=[tags], status=status)
         model = model.model_dump_json(indent=2)
         return model
