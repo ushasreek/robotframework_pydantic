@@ -1,0 +1,18 @@
+{
+    "id": 0,
+    "category": {
+      "id": 0,
+      "name": "dog1"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "http://dog1.png"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "tag1"
+      }
+    ],
+    "status": "available"
+  }
